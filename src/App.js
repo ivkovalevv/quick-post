@@ -7,7 +7,7 @@ import AppRouter from "./components/UI/appRouter";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/quick-post">
       <Navbar></Navbar>
       <AppRouter></AppRouter>
     </BrowserRouter>
