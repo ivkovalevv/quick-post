@@ -7,7 +7,7 @@ import AppRouter from "./components/UI/appRouter";
 
 function App() {
   return (
-    <BrowserRouter basename=".">
+    <BrowserRouter>
       <Navbar></Navbar>
       <AppRouter></AppRouter>
     </BrowserRouter>
