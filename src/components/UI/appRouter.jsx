@@ -7,9 +7,9 @@ import { Route, Routes} from "react-router-dom";
 const AppRouter = () =>{
     return(
         <Routes>
-          <Route path="/about" element={<About></About>}></Route>
-          <Route path="/posts" element={<Posts></Posts>}></Route>
-          <Route exact path="/posts/:id" element={<PostsIdPage></PostsIdPage>}></Route>
+          <Route path="/quick-post/about" element={<About></About>}></Route>
+          <Route path="/quick-post/posts" element={<Posts></Posts>}></Route>
+          <Route exact path="/quick-post/posts/:id" element={<PostsIdPage></PostsIdPage>}></Route>
         </Routes>
     )
 }
