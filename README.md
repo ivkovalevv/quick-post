@@ -3,7 +3,7 @@
 [![Демо](https://img.shields.io/badge/-ДЕМО-00C853?style=for-the-badge&logo=vercel&logoColor=white)](https://ivkovalevv.github.io/quick-post/)
 [![Исходный код](https://img.shields.io/badge/-ИСХОДНЫЙ_КОД-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ivkovalevv/quick-post)
 
-Приложение для работы с постами: загрузка из API, создание, сортировка и поиск. Написано на React с использованием классовых компонентов.
+SPA приложение для работы с постами: загрузка из API, создание, сортировка и поиск. Написано на React с использованием классовых компонентов.
 
 ## ✨ Основные функции
 
