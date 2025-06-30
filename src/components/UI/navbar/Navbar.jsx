@@ -12,13 +12,13 @@ const Navbar = (props) =>{
         <div className="navbar__links">
           <Link className="navbar__link" to="/about">About</Link>
           <Link className="navbar__link" to="/posts">Posts</Link>
-          <button className="color-theme-button" onClick={(e) => themeHandler(e)}>
+          <button className="color-theme-button" >
             <label
               htmlFor="themeToggle"
               className="themeToggle st-sunMoonThemeToggleBtn"
               type="checkbox"
             >
-              <input type="checkbox" id="themeToggle" className="themeToggleInput" />
+              <input type="checkbox" id="themeToggle" className="themeToggleInput" onClick={(e) => themeHandler(e)}/>
               <svg
                 width="18"
                 height="18"
