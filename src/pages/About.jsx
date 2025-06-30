@@ -3,7 +3,7 @@ import React from "react";
 const About = () =>{
     return (
         <h1>
-            Это приложение создано в 2023 году
+            This application was created in 2023 as part of the study of the React library and its class components.
         </h1>
     )
 }
