@@ -7,7 +7,7 @@ import PostService from "../API/PostService"
 const PostIdPage = () => {
     const params = useParams()
     const [post, setPost] = useState({})
-    const [comments, setComments] = useState([])
+    const [comments, setComments] = useState({comments: []})
     const [fetchPostById, isLoading, error] = useFetching(async (id) => {
         const response = await PostService.getById(id)
         setPost(response.data)
@@ -22,20 +22,22 @@ const PostIdPage = () => {
         fetchComments(params.id)
     }, [])
 
+    console.log(comments.comments)
+
+
     return(
         <div>
             <h1>Вы открыли страницу поста c ID {params.id}</h1>
             {isLoading
                 ? <Loader></Loader>
                 : <div>{post.id}. {post.title}</div>}
-            <h2>Комментарии</h2>
+            {comments.comments.length ? <h2>Комментарии</h2> : null}
             {isComLoading
                 ? <Loader></Loader>
                 : <div>
-                    {comments.map(comm =>
+                    {comments.comments.map(comment =>
                         <div style={{marginTop: 10}}>
-                            <h5>{comm.email}</h5>
-                            <div>{comm.body}</div>
+                            <div>{comment.body}</div>
                         </div>
                     )}
                   </div>}

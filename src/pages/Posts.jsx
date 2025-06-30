@@ -47,8 +47,6 @@ function Posts() {
   }
 
   const removePost = (post) => {
-    console.log(post)
-    console.log(posts.posts.filter(p => p.id !== post.id))
     setPosts({posts: posts.posts.filter(p => p.id !== post.id)})
   }
 
