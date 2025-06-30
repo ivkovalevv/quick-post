@@ -5,34 +5,31 @@ import MyButton from "../components/UI/button/MyButton";
 import PostForm from "../components/PostForm";
 import PostFilter from "../components/PostFilter";
 import MyModal from "../components/UI/modal/MyModal";
-import { usePosts } from "../hooks/usePosts";
+import { usePosts, useSortedPosts } from "../hooks/usePosts";
 import PostService from "../API/PostService";
 import Loader from "../components/UI/loader/Loader";
 import { useFetching } from "../hooks/useFetching";
 import {getPageCount} from "../utils/pages"
 import Pagination from "../components/UI/pagination/Pagination";
 
-const defaultPosts = {
-  posts: [
+const defaultPosts = [
     {id: 1, title: 'Javascript', body: 'Its programmer language'},
     {id: 2, title: 'Node.js', body: 'I dont know what is it'},
     {id: 3, title: 'React', body: 'Its amazing features on JS! I am learning React right now!'}
-  ],
-}
+  ]
 
 function Posts() {
-  const [posts, setPosts] = useState(defaultPosts)
+  const [posts, setPosts] = useState([])
   const [filter, setFilter] = useState({sort: '', query: ''})
   const [modal, setModal] = useState(false)
   const sortedAndSearchePosts = usePosts(posts, filter.sort, filter.query)
-
 
   const [limit, setLimit] = useState(10)
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
   const [fetchPosts, isPostsLoading, postError] = useFetching(async (limit, page) =>{
     const response = await PostService.getAll(limit, page);
-    setPosts(response.data)
+    setPosts(response.data.posts)
     const totalCount = response.headers['x-total-count']
     setTotalPages(getPageCount(totalCount, limit))
   })
@@ -47,7 +44,7 @@ function Posts() {
   }
 
   const removePost = (post) => {
-    setPosts({posts: posts.posts.filter(p => p.id !== post.id)})
+    setPosts(posts.filter(p => p.id !== post.id))
   }
 
   const changePage = (page) =>{
