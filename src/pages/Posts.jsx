@@ -54,23 +54,25 @@ function Posts() {
 
   return (
     <div className="App">
-      <MyButton style={{marginTop: '30px'}} onClick={() => setModal(true)}>
-        Create a post
-      </MyButton>
-      <MyModal visible={modal} setVisible={setModal}>
-        <PostForm create={createPost}></PostForm>
-      </MyModal>
-      <hr style={{margin: '15px 0'}}></hr>
-      <PostFilter filter={filter} setFilter={setFilter}></PostFilter>
-      {postError && <h1>An error has occurred {postError}</h1>}
-      {isPostsLoading
-      ? <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}><Loader></Loader></div>
-      : <PostList remove={removePost} posts={sortedAndSearchePosts} title="Posts about everything"></PostList>}
-      <Pagination 
-        page={page} 
-        changePage={changePage} 
-        totalPages={totalPages}>
-      </Pagination>
+      <div className="page-wrapper">
+        <MyButton style={{marginTop: '30px'}} onClick={() => setModal(true)}>
+          Create a post
+        </MyButton>
+        <MyModal visible={modal} setVisible={setModal}>
+          <PostForm create={createPost}></PostForm>
+        </MyModal>
+        <hr style={{margin: '15px 0'}}></hr>
+        <PostFilter filter={filter} setFilter={setFilter}></PostFilter>
+        {postError && <h1>An error has occurred {postError}</h1>}
+        {isPostsLoading
+        ? <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}><Loader></Loader></div>
+        : <PostList remove={removePost} posts={sortedAndSearchePosts} title="Posts about everything"></PostList>}
+        <Pagination 
+          page={page} 
+          changePage={changePage} 
+          totalPages={totalPages}>
+        </Pagination>
+      </div>
     </div>
   );
 }

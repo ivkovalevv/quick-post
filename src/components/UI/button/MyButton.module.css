@@ -1,9 +1,9 @@
 .myBtn {
     padding: 5px 15px;
-    color: teal;
+    color: var(--primary-color);
     font-size: 14px;
     background: transparent;
-    border: 1px solid teal;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
     transition: all .1s;
@@ -12,5 +12,5 @@
 
 .myBtn:hover{
     color: #FFF;
-    background-color: rgba(0, 128, 128, 0.737);
+    background-color: var(--primary-color);
 }
