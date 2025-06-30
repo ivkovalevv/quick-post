@@ -12,17 +12,20 @@ import { useFetching } from "../hooks/useFetching";
 import {getPageCount} from "../utils/pages"
 import Pagination from "../components/UI/pagination/Pagination";
 
-const defaultPosts = [
-  {id: 1, title: 'Javascript', body: 'Its programmer language'},
-  {id: 2, title: 'Node.js', body: 'I dont know what is it'},
-  {id: 3, title: 'React', body: 'Its amazing features on JS! I am learning React right now!'}
-]
+const defaultPosts = {
+  posts: [
+    {id: 1, title: 'Javascript', body: 'Its programmer language'},
+    {id: 2, title: 'Node.js', body: 'I dont know what is it'},
+    {id: 3, title: 'React', body: 'Its amazing features on JS! I am learning React right now!'}
+  ],
+}
 
 function Posts() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState(defaultPosts)
   const [filter, setFilter] = useState({sort: '', query: ''})
   const [modal, setModal] = useState(false)
   const sortedAndSearchePosts = usePosts(posts, filter.sort, filter.query)
+
 
   const [limit, setLimit] = useState(10)
   const [page, setPage] = useState(1)
@@ -44,7 +47,9 @@ function Posts() {
   }
 
   const removePost = (post) => {
-    setPosts(posts.filter(p => p.id !== post.id))
+    console.log(post)
+    console.log(posts.posts.filter(p => p.id !== post.id))
+    setPosts({posts: posts.posts.filter(p => p.id !== post.id)})
   }
 
   const changePage = (page) =>{
