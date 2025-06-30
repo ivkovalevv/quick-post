@@ -26,7 +26,7 @@ const PostIdPage = () => {
 
 
     return(
-        <div>
+        <div className="page-wrapper">
             <h1>You have opened the page of the post with ID {params.id}</h1>
             {isLoading
                 ? <Loader></Loader>

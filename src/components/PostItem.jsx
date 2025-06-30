@@ -15,10 +15,10 @@ const PostItem = (props) => {
       </div>
       <div className="post__btns">
       <MyButton onClick={() => router(`/posts/${props.post.id}`)}>
-          Открыть
+          &#187;
         </MyButton>
         <MyButton onClick={() => {props.remove(props.post)}}>
-          Удалить
+          ×
         </MyButton>
       </div>
     </div>

@@ -1,13 +1,16 @@
 .myBtn {
+    width: 60px;
+    height: 60px;
     padding: 5px 15px;
     color: var(--primary-color);
-    font-size: 14px;
     background: transparent;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
     transition: all .1s;
     margin: 0px 5px 0px 5px;
+    border-radius: 50%;
+    font-size: 28px;
 }
 
 .myBtn:hover{

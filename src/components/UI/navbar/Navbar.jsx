@@ -18,7 +18,7 @@ const Navbar = (props) =>{
               className="themeToggle st-sunMoonThemeToggleBtn"
               type="checkbox"
             >
-              <input type="checkbox" id="themeToggle" className="themeToggleInput" onClick={(e) => themeHandler(e)}/>
+              <input type="checkbox"  checked={props.theme} id="themeToggle" className="themeToggleInput" onClick={(e) => themeHandler(e)}/>
               <svg
                 width="18"
                 height="18"

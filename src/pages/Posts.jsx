@@ -56,7 +56,7 @@ function Posts() {
     <div className="App">
       <div className="page-wrapper">
         <MyButton style={{marginTop: '30px'}} onClick={() => setModal(true)}>
-          Create a post
+          +
         </MyButton>
         <MyModal visible={modal} setVisible={setModal}>
           <PostForm create={createPost}></PostForm>
