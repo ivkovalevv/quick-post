@@ -58,6 +58,38 @@ body.dark-theme {
   border-top: 1px solid var(--border-color);
 }
 
+/* SELECT */
+
+.select{
+  padding: 8px 8px;
+  color: var(--text-color);
+  border-radius: 14px;
+  background: var(--nav-bg-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.9px);
+  -webkit-backdrop-filter: blur(11.9px);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: box-shadow .3s ease, outline .3s ease, border .3s ease;
+  font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
+}
+
+.select:focus{
+  outline: none;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.select-option{
+  background: var(--nav-bg-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.9px);
+  -webkit-backdrop-filter: blur(11.9px);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
+}
+
 /* POST LIST */
 
 .posts-list-title{
