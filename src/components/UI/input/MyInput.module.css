@@ -9,6 +9,10 @@
     transition: box-shadow .3s ease, outline .3s ease, border .3s ease;
     color: var(--text-color);
     font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+    background: var(--nav-bg-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
 }
 
 .myInput:focus{

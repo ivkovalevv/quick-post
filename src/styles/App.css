@@ -23,6 +23,7 @@ body.light-theme {
   --primary-color: #6200ee;
   --secondary-color: #03dac6;
   --border-color: rgba(80, 80, 80, 0.43);
+  --dots-color: #561ea534;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
@@ -37,8 +38,20 @@ body.dark-theme {
   --primary-color: #bb86fc;
   --secondary-color: #03dac6;
   --border-color: rgba(80, 80, 80, 0.43);
+  --dots-color: #49198dcc;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, var(--dots-color) 5%, transparent 5%);
+  background-size: 30px 30px;
 }
 
 .page-wrapper{
@@ -71,7 +84,7 @@ body.dark-theme {
   border: 1px solid var(--border-color);
   cursor: pointer;
   transition: box-shadow .3s ease, outline .3s ease, border .3s ease;
-  font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
 }
 
 .select:focus{
@@ -87,7 +100,7 @@ body.dark-theme {
   -webkit-backdrop-filter: blur(11.9px);
   border: 1px solid var(--border-color);
   cursor: pointer;
-  font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
 }
 
 /* POST LIST */
@@ -99,23 +112,35 @@ body.dark-theme {
 }
 
 .post{
-    display: flex;
-    padding: 15px;
-    border: 2px solid var(--primary-color);
-    margin-top: 15px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 16px;
+  display: flex;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: var(--nav-bg-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.9px);
+  -webkit-backdrop-filter: blur(11.9px);
+  transition: border .3s ease;
+}
+
+.post:hover{
+  border: 1px solid var(--primary-color);
 }
 
 .post__title{
   font-size: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
   font-weight: 600;
+  margin-bottom: 10px;
+  user-select: none;
 }
 
 .post__description{
   font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
   font-weight: 400;
+  user-select: none;
 }
 
 .post__btns{
