@@ -8,10 +8,10 @@ const PostItem = (props) => {
   return (
       <div className="post">
       <div className="post__content">
-        <strong>{props.post.id}. {props.post.title}</strong>
-        <div>
+        <p className="post__title">{props.post.id}. {props.post.title}</p>
+        <p className="post__description">
           {props.post.body}
-        </div>
+        </p>
       </div>
       <div className="post__btns">
       <MyButton onClick={() => router(`/posts/${props.post.id}`)}>

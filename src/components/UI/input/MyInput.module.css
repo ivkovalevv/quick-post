@@ -1,7 +1,6 @@
 .myInput{
     width: 100%;
     padding: 15px 25px;
-    margin: 5px 0;
     border: 1px solid var(--border-color);
     background-color: var(--nav-bg-color);
     border-radius: 16px;
@@ -9,6 +8,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
     transition: box-shadow .3s ease, outline .3s ease, border .3s ease;
     color: var(--text-color);
+    font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
 }
 
 .myInput:focus{
