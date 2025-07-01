@@ -1,16 +1,11 @@
-.loader{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 7px dashed teal;
-    animation: rotate 3s infinite linear;
+.loader {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#b8b8b8;
+  border-right-color: #BB86FC;
+  animation:s2 1s infinite linear;
 }
 
-@keyframes rotate {
-    from{
-        transform: rotate(0deg) scale(0.5);
-    }
-    to{
-        transform: rotate(360deg) scale(1.4);
-    }
-}
+@keyframes s2 {to{transform: rotate(1turn)}}
