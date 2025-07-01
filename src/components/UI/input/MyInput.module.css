@@ -1,14 +1,14 @@
 .myInput{
     width: 100%;
-    padding: 15px 25px;
+    padding: clamp(0.625rem, 0.5357rem + 0.4464vw, 0.9375rem) clamp(0.9375rem, 0.7589rem + 0.8929vw, 1.5625rem);
     border: 1px solid var(--border-color);
     background-color: var(--nav-bg-color);
-    border-radius: 16px;
+    border-radius: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
     margin-bottom: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
     transition: box-shadow .3s ease, outline .3s ease, border .3s ease;
     color: var(--text-color);
-    font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+    font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.125rem);
     background: var(--nav-bg-color);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.9px);

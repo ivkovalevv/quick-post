@@ -57,7 +57,7 @@ body::before {
 }
 
 .page-wrapper{
-  width: 98%;
+  width: 95%;
   max-width: 800px;
   margin: 0 auto;
   padding: clamp(5rem, 4.2857rem + 3.5714vw, 7.5rem) 0px;
@@ -84,8 +84,11 @@ body::before {
 }
 
 .about-title{
+  max-width: 900px;
+  margin: 0 auto;
   color: var(--hover-text-color);
   font-size: clamp(1.375rem, 0.625rem + 3.75vw, 4rem);
+  text-align: center;
 }
 
 .post-filter-wrapper{
@@ -130,8 +133,10 @@ body::before {
 
 .posts-list-title{
   width: 100%;
-  font-size: clamp(1.5rem, 0.9643rem + 2.6786vw, 3.375rem);
+  font-size: clamp(1.875rem, 1.4464rem + 2.1429vw, 3.375rem);
   text-align: center;
+  color: var(--hover-text-color);
+  margin-top: 10px;
 }
 
 .post{
