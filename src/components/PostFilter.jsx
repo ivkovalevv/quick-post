@@ -4,7 +4,7 @@ import MySelect from "./UI/select/MySelect";
 
 const PostFilter = ({filter, setFilter}) =>{
     return (
-        <div className="post-filter-wrapper">
+        <form className="post-filter-wrapper">
         <MyInput
           value={filter.query}
           onChange={e => setFilter({...filter, query: e.target.value})}
@@ -19,7 +19,7 @@ const PostFilter = ({filter, setFilter}) =>{
             {value: 'body', name: 'by description'}
           ]}>
         </MySelect>
-      </div>
+      </form>
     )
 }
 
