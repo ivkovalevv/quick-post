@@ -22,7 +22,7 @@ const PostForm = ({create}) => {
           value={post.title}
           onChange={e => setPost({...post, title: e.target.value})}
           type="text" 
-          placeholder="Название поста"
+          placeholder="Post title"
           class="modal-input">
         </MyInput>
         {/* Неуправляемый компонент */}
@@ -30,10 +30,10 @@ const PostForm = ({create}) => {
           value={post.body}
           onChange={e => setPost({...post, body: e.target.value})}
           type="text" 
-          placeholder="Описание поста"
+          placeholder="Post description"
           class="modal-input">
         </MyInput>
-        <MyButton onClick={addNewPost}>Создать пост</MyButton>
+        <MyButton onClick={addNewPost}>Create a post</MyButton>
       </form>
     )
 }
