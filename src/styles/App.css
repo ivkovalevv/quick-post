@@ -65,7 +65,7 @@ body::before {
 
 
 .main-title{
-  font-size: clamp(1.375rem, 1.1964rem + 0.8929vw, 2rem);
+  font-size: clamp(1.125rem, 0.875rem + 1.25vw, 2rem);
   margin-top: 15px;
 }
 
@@ -76,7 +76,7 @@ body::before {
 }
 
 .main-list-item{
-  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  font-size: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
 }
 
 .main-active-wrapper{
@@ -88,7 +88,7 @@ body::before {
 }
 
 .main-active-description{
-  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+  font-size: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
   color: var(--text-color);
   filter: brightness(0.7);
   margin-bottom: 5px;
@@ -118,9 +118,9 @@ body::before {
   max-width: 900px;
   margin: 0 auto;
   color: var(--hover-text-color);
-  font-size: clamp(1.375rem, 0.625rem + 3.75vw, 4rem);
+  font-size: clamp(1.75rem, 1.1429rem + 3.0357vw, 3.875rem);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
 }
 
 .about-title-special{
@@ -128,6 +128,13 @@ body::before {
   background: -webkit-linear-gradient(left, var(--hover-text-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.about-description{
+  width: 80%;
+  margin: 0 auto;
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  text-align: center;
 }
 
 .post-filter-wrapper{
