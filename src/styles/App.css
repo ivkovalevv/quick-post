@@ -25,6 +25,8 @@ body.light-theme {
   --secondary-color: #03dac6;
   --border-color: rgba(80, 80, 80, 0.43);
   --dots-color: #561ea534;
+  width: 100%;
+  height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
@@ -40,6 +42,8 @@ body.dark-theme {
   --secondary-color: #6e26d3;
   --border-color: rgba(80, 80, 80, 0.43);
   --dots-color: #49198dcc;
+  width: 100%;
+  height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
