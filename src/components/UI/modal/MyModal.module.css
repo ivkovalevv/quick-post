@@ -11,7 +11,7 @@
 
 .myModalContent {
     padding: 25px;
-    background: var(--nav-bg-color);
+    background: var(--hover-text-color);
     border-radius: 16px;
     min-width: 250px;
     border: 1px solid var(--primary-color);
