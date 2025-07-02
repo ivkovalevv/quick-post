@@ -59,6 +59,7 @@ body::before {
 .page-wrapper{
   width: 95%;
   max-width: 800px;
+  height: 100%;
   margin: 0 auto;
   padding: clamp(5rem, 4.2857rem + 3.5714vw, 7.5rem) 0px;
 }
@@ -87,7 +88,7 @@ body::before {
   justify-content: center;
 }
 
-.main-active-description{
+.small-description{
   font-size: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
   color: var(--text-color);
   filter: brightness(0.7);

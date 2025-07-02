@@ -27,20 +27,21 @@ const PostIdPage = () => {
 
     return(
         <div className="page-wrapper">
-            <h1>You have opened the page of the post with ID {params.id}</h1>
+            <h1 className="small-description" style={{textAlign: "left"}}>You have opened the page of the post with ID {params.id}</h1>
             {isLoading
                 ? <Loader></Loader>
-                : <div>{post.id}. {post.title}</div>}
-            {comments.comments.length ? <h2>Comments</h2> : null}
-            {isComLoading
-                ? <Loader></Loader>
                 : <div>
-                    {comments.comments.map(comment =>
-                        <div style={{marginTop: 10}}>
-                            <div>{comment.body}</div>
-                        </div>
-                    )}
-                  </div>}
+                    <div className="post__title">{post.id}. {post.title}</div>
+                    {comments.comments.length ? <h2>Comments</h2> : null}
+                    <div>
+                        {comments.comments.map(comment =>
+                            <div style={{marginTop: 10}}>
+                                <div>{comment.body}</div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            }   
         </div>
     )
 }

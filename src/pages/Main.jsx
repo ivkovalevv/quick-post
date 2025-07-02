@@ -20,7 +20,7 @@ const Main = () =>{
                 <li className="main-list-item">Explore posts in detail.</li>
             </ul>
             <div className="main-active-wrapper">
-                <p className="main-active-description">Click the button below to get started!</p>
+                <p className="small-description">Click the button below to get started!</p>
                 <button>Get started</button>
             </div>
         </div>
