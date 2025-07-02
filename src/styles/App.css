@@ -63,6 +63,37 @@ body::before {
   padding: clamp(5rem, 4.2857rem + 3.5714vw, 7.5rem) 0px;
 }
 
+
+.main-title{
+  font-size: clamp(1.375rem, 1.1964rem + 0.8929vw, 2rem);
+  margin-top: 15px;
+}
+
+.main-list{
+  padding-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.main-list-item{
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+}
+
+.main-active-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-active-description{
+  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+  color: var(--text-color);
+  filter: brightness(0.7);
+  margin-bottom: 5px;
+}
+
 .cricle-button{
   width: 60px;
   height: 60px;
@@ -89,6 +120,14 @@ body::before {
   color: var(--hover-text-color);
   font-size: clamp(1.375rem, 0.625rem + 3.75vw, 4rem);
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-title-special{
+  color: var(--primary-color);
+  background: -webkit-linear-gradient(left, var(--hover-text-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .post-filter-wrapper{
