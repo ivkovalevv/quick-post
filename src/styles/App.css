@@ -502,8 +502,9 @@ transition: all 300ms ease-in-out;
 .cssbuttons-io-button {
   background: #a370f0;
   color: white;
-  padding: 0.35em;
-  padding-left: 1.2em;
+  width: 98%;
+  max-width: clamp(12.5rem, 11.6071rem + 4.4643vw, 15.625rem);
+  height: clamp(3.75rem, 3.3929rem + 1.7857vw, 5rem);
   font-size: 17px;
   font-weight: 500;
   border-radius: 0.9em;
@@ -514,11 +515,16 @@ transition: all 300ms ease-in-out;
   box-shadow: inset 0 0 1.6em -0.6em #714da6;
   overflow: hidden;
   position: relative;
-  height: 2.8em;
   padding-right: 3.3em;
   cursor: pointer;
   text-decoration: none;
   margin-top: 5px;
+}
+
+.io-button-text{
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.125rem, 0.9643rem + 0.8036vw, 1.6875rem);
 }
 
 .cssbuttons-io-button .icon {
@@ -528,8 +534,8 @@ transition: all 300ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
+  height: clamp(3.125rem, 2.7679rem + 1.7857vw, 4.375rem);
+  width: 3.2em;
   border-radius: 0.7em;
   box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
   right: 0.3em;

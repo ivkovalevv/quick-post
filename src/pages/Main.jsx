@@ -23,7 +23,7 @@ const Main = () =>{
             <div className="main-active-wrapper">
                 <p className="small-description">Click the button below to get started!</p>
                 <Link className="cssbuttons-io-button" to="/posts">
-                    Get started
+                    <p className="io-button-text">Get started</p>
                     <div class="icon">
                         <svg
                         height="24"
