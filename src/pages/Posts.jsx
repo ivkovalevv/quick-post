@@ -54,7 +54,7 @@ function Posts() {
 
   return (
     <div className="page-wrapper">
-      <MyButton style={{marginTop: '30px'}} className={"cricle-button"} onClick={() => setModal(true)}>
+      <MyButton style={{marginTop: '10px'}} className={"cricle-button"} onClick={() => setModal(true)}>
         +
       </MyButton>
       <MyModal visible={modal} setVisible={setModal}>

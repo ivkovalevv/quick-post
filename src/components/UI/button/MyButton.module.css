@@ -14,3 +14,9 @@
     color: #FFF;
     background-color: var(--primary-color);
 }
+
+@media(max-width: 768px){
+  .myBtn{
+    width: 100%;
+  }
+}

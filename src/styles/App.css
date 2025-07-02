@@ -95,8 +95,8 @@ body::before {
 }
 
 .cricle-button{
-  width: 60px;
-  height: 60px;
+  width: clamp(2.8125rem, 2.5446rem + 1.3393vw, 3.75rem);
+  height: clamp(2.8125rem, 2.5446rem + 1.3393vw, 3.75rem);
   padding: 5px 15px;
   color: var(--primary-color);
   background: transparent;
@@ -105,7 +105,7 @@ body::before {
   cursor: pointer;
   transition: all .1s;
   margin: 0px 5px 0px 5px;
-  font-size: 28px;
+  font-size: clamp(1.125rem, 0.9464rem + 0.8929vw, 1.75rem);
   border-radius: 50%;
 }
 
@@ -432,3 +432,12 @@ transition: all 300ms ease-in-out;
   }
 }
 
+@media(max-width: 768px){
+  .post{
+    flex-direction: column;
+  }
+  .post__btns{
+    width: 100%;
+    margin-top: 15px;
+  }
+}
