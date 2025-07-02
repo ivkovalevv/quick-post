@@ -24,7 +24,7 @@ function App() {
   }, [lightTheme]);
 
   return (
-    <BrowserRouter /* basename="/quick-post/" */>
+    <BrowserRouter basename="/quick-post/">
       <Navbar theme={lightTheme} themeHandler={setLightTheme}></Navbar>
       <AppRouter></AppRouter>
     </BrowserRouter>
