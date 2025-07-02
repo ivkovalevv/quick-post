@@ -7,7 +7,7 @@ const PostFilter = ({filter, setFilter}) =>{
         <form className="post-filter-wrapper">
         <MyInput
           value={filter.query}
-          onChange={e => setFilter({...filter, query: e.target.value})}
+          onChange={e => setFilter({...filter, query: e.target.value.toLowerCase()})}
           placeholder="Search..."
         ></MyInput>
         <MySelect 
