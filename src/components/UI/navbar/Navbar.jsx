@@ -9,7 +9,7 @@ const Navbar = (props) =>{
 
     return(
         <div className="navbar">
-          <Link className="navbar__logo" to="/">Quick posts</Link>
+          <Link className="navbar__logo" to="/">Quick post</Link>
         <div className="navbar__links">
           <Link className="navbar__link" to="/about">About</Link>
           <Link className="navbar__link" to="/posts">Posts</Link>
